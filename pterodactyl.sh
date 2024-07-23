@@ -183,7 +183,8 @@ InstallPhpMyAdmin() {
 UpdatePanel() {
   cd /var/www/pterodactyl
   php artisan down
-  curl -L $panel_lts | tar -xzvf
+  wget $panel_lts
+  tar -xzvf panel.tar.gz
   chmod -R 755 storage/* bootstrap/cache
   composer install --no-dev --optimize-autoloader
   php artisan view:clear
