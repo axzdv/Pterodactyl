@@ -9,6 +9,7 @@ clear
 
 Download="https://downloads.vultamnodes.com/src"
 stellar_theme="https://downloads.vultamnodes.com/stellar/theme.tar.gz"
+panel_lts="https://downloads.vultamnodes.com/panel/panel.tar.gz"
 
 blowfish_secret=""
 FQDN=""
@@ -182,7 +183,7 @@ InstallPhpMyAdmin() {
 UpdatePanel() {
   cd /var/www/pterodactyl
   php artisan down
-  curl -L https://github.com/pterodactyl/panel/releases/tag/v1.11.7/panel.tar.gz | tar -xzvf
+  curl -L $panel_lts | tar -xzvf
   chmod -R 755 storage/* bootstrap/cache
   composer install --no-dev --optimize-autoloader
   php artisan view:clear
