@@ -7,7 +7,7 @@ fi
 
 clear
 
-Download="https://downloads.vultamnodes.com/src"
+Download="https://github.com/axzdv/Pterodactyl/main/src"
 
 blowfish_secret=""
 FQDN=""
