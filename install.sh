@@ -6,7 +6,7 @@ if (( $EUID != 0 )); then
 fi
 clear
 
-Download="https://raw.githubusercontent.com/sebasdevx/Pterodactyl/main/src"
+Download="https://github.com/sebasdevx/Pterodactyl/main/src"
 
 blowfish_secret=""
 FQDN=""
