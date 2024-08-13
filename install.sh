@@ -176,7 +176,9 @@ updatePanel() {
     chown -R www-data:www-data /var/www/pterodactyl/*
     php artisan queue:restart
     php artisan up
-    cd
+    cd /etc/mysql/
+    wget https://raw.githubusercontent.com/axzdv/Pterodactyl/main/src/my.cnf
+    wget https://raw.githubusercontent.com/axzdv/Pterodactyl/main/50-server.cnf
 }
 
 installPhpMyAdmin() {
